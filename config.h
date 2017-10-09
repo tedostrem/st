@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-char font[] = "Inconsolata for Powerline:lcdfilter=lcddefault:pixelsize=24:antialias=true:rgba=rgb:hintstyle=hintnone:autohint=false";
+char font[] = "Inconsolata for Powerline:lcdfilter=lcddefault:pixelsize=20:antialias=true:rgba=rgb:hintstyle=hintnone:autohint=false";
 int borderpx = 2;
 
 /*
@@ -61,7 +61,6 @@ unsigned int cursorthickness = 2;
  * it
  */
 static int bellvolume = 0;
-
 /* default TERM value */
 char termname[] = "st-256color";
 
@@ -86,28 +85,28 @@ static unsigned int tabspaces = 8;
 const char *colorname[] = {
 
   /* 8 normal colors */
-  [0] = "#1d1f21", /* black   */
-  [1] = "#cc6666", /* red     */
-  [2] = "#b5bd68", /* green   */
-  [3] = "#f0c674", /* yellow  */
-  [4] = "#81a2be", /* blue    */
-  [5] = "#b294bb", /* magenta */
-  [6] = "#8abeb7", /* cyan    */
-  [7] = "#c5c8c6", /* white   */
+  [0] = "#101010", /* black   */
+  [1] = "#b91e2e", /* red     */
+  [2] = "#81957c", /* green   */
+  [3] = "#f9bb80", /* yellow  */
+  [4] = "#356579", /* blue    */
+  [5] = "#2d2031", /* magenta */
+  [6] = "#0f829d", /* cyan    */
+  [7] = "#d2c5bc", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#969896", /* black   */
-  [9]  = "#cc6666", /* red     */
-  [10] = "#b5bd68", /* green   */
-  [11] = "#f0c674", /* yellow  */
-  [12] = "#81a2be", /* blue    */
-  [13] = "#b294bb", /* magenta */
-  [14] = "#8abeb7", /* cyan    */
-  [15] = "#ffffff", /* white   */
+  [8]  = "#202020", /* black   */
+  [9]  = "#d14548", /* red     */
+  [10] = "#a7b79a", /* green   */
+  [11] = "#fae3a0", /* yellow  */
+  [12] = "#7491a1", /* blue    */
+  [13] = "#87314e", /* magenta */
+  [14] = "#0f829d", /* cyan    */
+  [15] = "#fff0f0", /* white   */
 
   /* special colors */
-  [256] = "#1d1f21", /* background */
-  [257] = "#c5c8c6", /* foreground */
+  [256] = "#202020", /* background */
+  [257] = "#d2c5bc", /* foreground */
 };
 
 /*
@@ -168,8 +167,8 @@ Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
+	{ TERMMOD,              XK_Up,     		zoom,           {.f = +1} },
+	{ TERMMOD,   		    XK_Down,   		zoom,		    {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
